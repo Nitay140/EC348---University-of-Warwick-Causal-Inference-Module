@@ -9,7 +9,7 @@ library(estimatr) # Fast estimation with robust/clustered standard errors
 
 
 #Loading Dataset (function from the haven library which helps with that)
-data <- read_dta("/Users/nitaycarmi/Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/Data_Covid_Paper_assignment.dta")
+data <- read_dta("/Users/Assignment 1/Data_Covid_Paper_assignment.dta")
 
 # Table 2 Replication: Effect of Training on Salaried Employment
 
@@ -269,7 +269,7 @@ table2_final <- create_table2() # Generating and saving the final table.
 print(table2_final, row.names = FALSE)
 
 # Saving as csv
-write.csv(table2_final, "/Users/nitaycarmi/Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/table2_replication.csv", row.names = FALSE)
+write.csv(table2_final, "/Users//Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/table2_replication.csv", row.names = FALSE)
 
 # Creating html table
 html_table <- table2_final %>%
@@ -291,7 +291,7 @@ html_table <- table2_final %>%
                notation = "none") # I am adding footnotes to further explain the html table.
 
 # Saving html
-save_kable(html_table, "/Users/nitaycarmi/Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/table2_replication.html")
+save_kable(html_table, "/Users//Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/table2_replication.html")
 
 # Comparison with paper (for my understanding)
 comparison <- data.frame(
@@ -709,7 +709,7 @@ table4b <- rbind(table4b, data.frame(
 print(table4b, row.names = FALSE) # Displaying table in console
 
 # Saving Output
-write.csv(table4b, "/Users/nitaycarmi/Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/table4b.csv", row.names = FALSE)
+write.csv(table4b, "/Users//Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/table4b.csv", row.names = FALSE)
 
 # Creating HTML
 html_table <- table4b %>%
@@ -730,7 +730,7 @@ html_table <- table4b %>%
     "* p < 0.10, ** p < 0.05, *** p < 0.01"
   ), notation = "none")
 
-save_kable(html_table, "/Users/nitaycarmi/Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/table4b.html")
+save_kable(html_table, "/Users//Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/table4b.html")
 
 # Quality control: checking how close my replication is to the published results
 # Comparison with Paper
@@ -1066,7 +1066,7 @@ cat("Table A9 Complete")
 print(table_a9, row.names = FALSE)
 
 # Saving CSV
-write.csv(table_a9, "/Users/nitaycarmi/Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/table_a9.csv", row.names = FALSE)
+write.csv(table_a9, "/Users//Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/table_a9.csv", row.names = FALSE)
 cat("Table saved: table_a9.csv")
 
 # Creating HTML with formatting
@@ -1087,7 +1087,7 @@ html_table <- table_a9 %>%
                  paste("Total observations:", n_control + n_treatment)),
                notation = "none")
 
-save_kable(html_table, "/Users/nitaycarmi/Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/table_a9.html")
+save_kable(html_table, "/Users//Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/table_a9.html")
 
 # Balance Summary
 # Assessing whether randomisation successfully created balanced groups
@@ -1537,7 +1537,7 @@ print(sort(mostly_selected[mostly_selected >= 3], decreasing = TRUE))
 
 # Saving Outputs
 # Saving table
-write.csv(table_lasso, "/Users/nitaycarmi/Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/table2_column5_lasso.csv", row.names = FALSE)
+write.csv(table_lasso, "/Users//Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/table2_column5_lasso.csv", row.names = FALSE)
 
 # Saving summary
 summary_df <- data.frame(
@@ -1551,7 +1551,7 @@ summary_df <- data.frame(
   Observations = c(results_A$n_obs, results_B$n_obs, results_C$n_obs, results_D$n_obs)
 )
 
-write.csv(summary_df, "/Users/nitaycarmi/Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/lasso_summary_all_panels.csv", row.names = FALSE)
+write.csv(summary_df, "/Users//Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/lasso_summary_all_panels.csv", row.names = FALSE)
 
 # html table
 html_table <- table_lasso %>%
@@ -1568,7 +1568,7 @@ html_table <- table_lasso %>%
     "Standard errors in parentheses. *** p<0.01, ** p<0.05, * p<0.10"
   ), notation = "none")
 
-save_kable(html_table, "/Users/nitaycarmi/Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/table2_column5_lasso.html")
+save_kable(html_table, "/Users/Assignment 1/table2_column5_lasso.html")
 
 
 
@@ -1911,7 +1911,7 @@ caste_table <- rbind(caste_table, data.frame(
 print(caste_table, row.names = FALSE)
 
 # Step 6: Save Outputs
-write.csv(caste_table, "/Users/nitaycarmi/Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/caste_heterogeneity_table.csv", row.names = FALSE)
+write.csv(caste_table, "/Users/Assignment 1/caste_heterogeneity_table.csv", row.names = FALSE)
 cat("Table saved: caste_heterogeneity_table.csv")
 
 # Saving summary
@@ -1932,7 +1932,7 @@ summary_df <- data.frame(
                        results_C$pval_interaction, results_D$pval_interaction)
 )
 
-write.csv(summary_df, "/Users/nitaycarmi/Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/caste_heterogeneity_summary.csv", row.names = FALSE)
+write.csv(summary_df, "/Users/Assignment 1/caste_heterogeneity_summary.csv", row.names = FALSE)
 
 # Creating HTML table
 html_caste_table <- caste_table %>%
@@ -1953,7 +1953,7 @@ html_caste_table <- caste_table %>%
     "Standard errors in parentheses. *** p<0.01, ** p<0.05, * p<0.10"
   ), notation = "none")
 
-save_kable(html_caste_table, "/Users/nitaycarmi/Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/caste_heterogeneity_table.html")
+save_kable(html_caste_table, "/Users/Assignment 1/caste_heterogeneity_table.html")
 
 # Step 7: Interpretation
 sig_interactions <- sum(c(results_A$pval_interaction, results_B$pval_interaction,
@@ -2049,7 +2049,7 @@ cat("Table 1: Survey Structure and Sample Characteristics")
 print(table1, row.names = FALSE)
 
 # Saving CSV
-write.csv(table1, "/Users/nitaycarmi/Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/table1_survey_structure.csv", row.names = FALSE)
+write.csv(table1, "/Users/Assignment 1/table1_survey_structure.csv", row.names = FALSE)
 
 # Creating formatted HTML table
 html_table1 <- table1 %>%
@@ -2081,7 +2081,7 @@ html_table1 <- table1 %>%
     notation = "none"
   )
 
-save_kable(html_table1, "/Users/nitaycarmi/Desktop/Year 3/EC348 Research in Policy Evaluation/Assignment 1/table1_survey_structure.html")
+save_kable(html_table1, "/Users/Assignment 1/table1_survey_structure.html")
 
 
 
